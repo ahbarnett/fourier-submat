@@ -1,5 +1,5 @@
 # fourier-submat
-MATLAB codes to generate the figures in the paper on Fourier submatrix condition number.
+MATLAB codes to generate the figures, and check certain analysis results, in the paper on Fourier submatrix condition number.
 
 Alex Barnett, March-April 2020.
 
@@ -16,3 +16,7 @@ Fig.4: `fig_rates.m` (takes 30 sec to run, and uses `dftmeasrate.m`)
 There are also several mathematics/analysis checking codes in `theorytests`.
 
 `utils` contains several helper routines, including some standard MATLAB codes by third parties.
+
+### References
+
+* ``How exponentially ill-conditioned are contiguous submatrices of the Fourier matrix?'', Alex H. Barnett, to appear, SIAM Rev. https://arxiv.org/abs/2004.09643

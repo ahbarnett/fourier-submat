@@ -78,27 +78,23 @@ if debug>1, fprintf('j=%d:\tlc=%.3g\n',j,lc), plot(j,lc,'+'); axis tight; hold o
 
 %%%%%%%%%%%%%%%
 function test_dftmeasrate
-% simple tests...
-if 0
-o.debug = 1;
-r1 = dftmeasrate(10,1,1,o)
-r2 = dftmeasrate(20,2,2,o)
-r1-r2
-
-o.debug=2; [r st] = dftmeasrate(30,15,15,o)
-%o.debug=2; r1 = dftmeasrate(30,29,3,o)
-%r1 = dftmeasrate(30,16,5,o)
-
-stop
-
-o.debug=2;
-r1 = dftmeasrate(50,12,12,o)
-r2 = dftmeasrate(25,6,6,o)
-r1-r2
-stop
+if 1   % simple tests...
+  o.debug = 1;
+  r1 = dftmeasrate(10,1,1,o)
+  r2 = dftmeasrate(20,2,2,o)
+  r1-r2
+  
+  o.debug=2; [r st] = dftmeasrate(30,15,15,o)
+  %o.debug=2; r1 = dftmeasrate(30,29,3,o)
+  %r1 = dftmeasrate(30,16,5,o)
+  
+  o.debug=2;
+  r1 = dftmeasrate(50,12,12,o)
+  r2 = dftmeasrate(25,6,6,o)
+  r1-r2
 end
 
-% test looping over (alpha,beta)...
+% larger test looping over (alpha,beta)...
 na = 200;   % 1 / step size in alpha or beta
 as = (1:20)/na;
 r = nan(numel(as)); st=r; r2=r; st2=r;   % data arrays
