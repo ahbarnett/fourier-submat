@@ -1,5 +1,5 @@
 % figure showing near-symmetry in the cond # of p*q submatrix of DFT,
-% wrt p -> N-p and q -> N-q.
+% wrt p -> N-p and q -> N-q. Generates Fig. 1.1 in paper.
 % Barnett 3/20/20
 
 clear
@@ -18,7 +18,7 @@ for i=1:nn, N = Ns(i); F = fft(eye(N));    % loop over N's
   ylabel('$p$','interpreter','latex');
   colormap(goodbw);  %colormap(jet(256));
   colorbar %('southoutside')
-  title(sprintf('$\\log_{10}$ cond$(A)$: $\\;N$=%d',N),'interpreter','latex');
+  title(sprintf('$\\log_{10} \\kappa(A)$: $\\;N$=%d',N),'interpreter','latex');
   axis equal tight ij;
   text(0.5-N/4,0.5,['(' char(96+i) ')'],'fontsize',12);
   %  print('-depsc2','-loose',sprintf('nearsymm%d.eps',i));  % loose fixes eps bbox
